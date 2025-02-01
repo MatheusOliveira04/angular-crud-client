@@ -1,0 +1,39 @@
+<main class="form-container">
+    <section class="navbar">
+        <h1>View of client register</h1>
+    </section>
+    <form [formGroup]="forms" class="form-content">
+        <div class="input-content">
+            <label for="id">id</label>
+            <input type="number" formControlName="id" id="id" readonly>
+        </div>
+        <div class="input-content">
+            <label for="name">Name</label>
+            <input type="text" formControlName="name" id="name">
+        </div>
+        <div class="input-content">
+            <label for="email">Email</label>
+            <input type="email" formControlName="email" id="email">
+        </div>
+        <div class="input-content">
+            <label for="phone">Phone</label>
+            <input type="text" formControlName="phone" id="phone">
+        </div>
+        <div class="input-content">
+            <label for="date">Date</label>
+            <input type="date" formControlName="birthDate" id="date">
+        </div>
+        <div class="content-warning">
+            <p *ngIf="forms.get('name')?.hasError('required') && forms.get('name')?.touched" class="message-warning">The field name cannot be empty</p>
+            <p *ngIf="forms.get('email')?.hasError('required') && forms.get('email')?.touched" class="message-warning">The field email cannot be empty</p>
+            <p *ngIf="forms.get('phone')?.hasError('required') && forms.get('phone')?.touched" class="message-warning">The field phone cannot be empty</p>
+            <p *ngIf="forms.get('birthDate')?.hasError('required') && forms.get('birthDate')?.touched" class="message-warning">The field date cannot be empty</p>
+        </div>
+        <div class="button-content">
+            <button *ngIf="buttonRegister" (click)="insert()" [disabled]="forms.invalid">Register</button>
+            <button *ngIf="!buttonRegister" (click)="update()" [disabled]="forms.invalid">Update</button>
+            <button *ngIf="!buttonRegister" (click)="delete()" [disabled]="forms.invalid">Delete</button>
+            <button *ngIf="!buttonRegister" (click)="cancel()">Cancel</button>
+        </div>
+    </form>
+</main>
