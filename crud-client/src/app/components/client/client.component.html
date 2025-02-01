@@ -1,0 +1,4 @@
+<app-client-forms (insertClient)="insert($event)" (updateClient)="update($event)" (deleteClient)="delete($event)" [selectedClient]="selectedClient"></app-client-forms>
+<app-client-table [clients]="clients"
+    (clientSelectedEvent)="selectClient($event)"    
+></app-client-table>
