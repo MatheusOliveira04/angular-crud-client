@@ -1,0 +1,25 @@
+{
+  "cliente": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "phone": "+1234567890",
+      "birthDate": "1990-05-15"
+    },
+    {
+      "id": 3,
+      "name": "Carlos Silva",
+      "email": "carlos.silva@example.com",
+      "phone": "+1444222333",
+      "birthDate": "1992-08-03"
+    },
+    {
+      "id": 4,
+      "name": "Marcela❤️(vulgo minha vida💕)",
+      "email": "Minha gostosa",
+      "phone": "48 999373874",
+      "birthDate": "2007-02-06"
+    }
+  ]
+}
